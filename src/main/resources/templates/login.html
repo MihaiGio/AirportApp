@@ -1,0 +1,52 @@
+<!doctype html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Login form</title>
+    <link href="#" th:replace="common :: bootstrap-css"/>
+    <link href="#" th:replace="common :: mdb-css"/>
+</head>
+<body>
+<div th:replace="header :: header-info"></div>
+
+<div class="bg-image"
+     style="background-image: url('https://www.gannett-cdn.com/-mm-/ff08101970c9b392424972bf0f5861a9adca4d8f/c=0-110-2122-1304/local/-/media/2016/04/20/USATODAY/usatsports/thinkstockphotos-486836087.jpg');
+            height: 100vh">
+    <div class="wrapper">
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 offset-md-4">
+                        <form method="post" th:action="@{/login}">
+                            <div class="mb-3">
+                                <div th:if="${param.logout}">
+                                    You have been successfully logged out.
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Username</label>
+                                <input class="form-control" type="text" id="username" name="username"/>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Password</label>
+                                <input class="form-control" type="password" id="password" name="password"/>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<p th:replace="footer :: footer-info"></p>
+
+<script src="#" th:replace="common :: bootstrap-js"></script>
+<script src="#" th:replace="common :: mdb-script"></script>
+</body>
+</html>
