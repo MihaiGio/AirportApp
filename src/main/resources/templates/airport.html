@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Airports</title>
+    <link href="#" th:replace="common :: bootstrap-css"/>
+    <link href="#" th:replace="common :: mdb-css"/>
+</head>
+<body>
+<p th:replace="header :: header-info"></p>
+
+<div class="bg-image"
+     style="background-image: url('https://www.gannett-cdn.com/-mm-/ff08101970c9b392424972bf0f5861a9adca4d8f/c=0-110-2122-1304/local/-/media/2016/04/20/USATODAY/usatsports/thinkstockphotos-486836087.jpg');
+            height: 100vh">
+    <table class="table table-dark table-sm">
+
+        <tr>
+            <th>Name</th>
+            <th>City</th>
+            <th>Country</th>
+            <th>Latitude</th>
+            <th>Longitude</th>
+        </tr>
+        <tr th:object="${airportDto}">
+            <td th:text="*{name}"></td>
+            <td th:text="*{city}"></td>
+            <td th:text="*{country}"></td>
+            <td th:text="*{latitude}"></td>
+            <td th:text="*{longitude}"></td>
+        </tr>
+    </table>
+
+</div>
+
+
+<p th:replace="footer :: footer-info"></p>
+
+<script src="#" th:replace="common :: bootstrap-js"></script>
+<script src="#" th:replace="common :: mdb-script"></script>
+</body>
+</html>
