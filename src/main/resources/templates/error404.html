@@ -1,0 +1,42 @@
+<!doctype html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Hello</title>
+    <link href="#" th:replace="common :: bootstrap-css"/>
+    <link href="#" th:replace="common :: mdb-css"/>
+    <link href="#" th:replace="common :: error"/>
+
+</head>
+<body>
+<p th:replace="header :: header-info"></p>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="error-template">
+                    <h1>
+                        Oops!</h1>
+                    <h2>
+                        404 Not Found</h2>
+                    <div class="error-details">
+                        Sorry, an error has occured, Requested page not found!
+                    </div>
+                    <div class="error-actions">
+                        <a href="/" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-home"></span>
+                            Take Me Home </a><a href="/" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-envelope"></span> Contact Support </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<p th:replace="footer :: footer-info"></p>
+
+<script src="#" th:replace="common :: bootstrap-js"></script>
+<script src="#" th:replace="common :: mdb-script"></script>
+</body>
+</html>
