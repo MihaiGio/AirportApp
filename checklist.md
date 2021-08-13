@@ -1,13 +1,13 @@
 #CHECKLIST
-- [ ] login
+- [x] login
 - [ ] registration
-- [ ] header
-- [ ] footer
-- [ ] home page
+- [x] header
+- [x] footer
+- [x] home page
 - [ ] search by airport
 - [ ] search by airline
 - [ ] dashboard
     - [ ] add functionality
     - [ ] edit functionality
     - [ ] delete functionality
-- [ ] custom error pages
+- [x] custom error pages
